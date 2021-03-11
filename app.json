@@ -1,0 +1,7 @@
+{
+  "name": "Azure Recording Download Sample",
+  "description": "A sample code that includes frontend and backend to download Opentok recording from Azure",
+  "repository": "https://github.com/nexmo-se/azure-recording-download-sample",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "express", "static"]
+}

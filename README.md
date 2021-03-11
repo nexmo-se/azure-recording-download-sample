@@ -1,3 +1,5 @@
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 # Azure Recording Download and Preview Sample
 This is a sample code that uses plain JS, HTML and CSS without any framework together with NodeJS as its backend. The sample code entry point is `server.js`. This will be your web server that serve frontend static file inside `/public/` folder and backend under `/api/` routes.
 
