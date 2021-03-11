@@ -1,0 +1,153 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+
+    <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+    <style>
+      body {
+        max-width: 600px;
+        margin: 0 auto;
+        font-family: Rubik;
+        padding-top: 16px;
+      }
+
+      button {
+        padding: 8px 16px;
+      }
+
+      .video_container {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      #agent-container, #customer-container {
+        width: 240px;
+        height: 180px;
+      }
+
+      #preview_container video {
+        width: 560px;
+        height: 420px;
+      }
+
+      .connect_container,
+      .connect_container__buttons {
+        display: flex;
+      }
+
+      .connect_container__input {
+        margin-bottom: 8px;
+      }
+
+      .connect_container__input p {
+        margin: 0px;
+        margin-bottom: 4px;
+      }
+
+      .connect_container {
+        flex-direction: column;
+      }
+
+      .connect_container input {
+        margin-bottom: 8px;
+        width: 100%;
+        padding: 8px 16px;
+      }
+
+      .connect_container button:not(:last-child) {
+        margin-right: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 id="lbl_role"></h3>
+    <div class="connect_container">
+      <div class="connect_container__input">
+        <p>Room Name</p>
+        <input
+          id="txt_room_name"
+          type="text"
+          placeholder="Enter your room name"
+        />
+      </div>
+      <div class="connect_container__buttons">
+        <button
+          id="btn_connect_agent"
+          type="button"
+          disabled
+        >
+          Connect as Agent
+        </button>
+        <button
+          id="btn_connect_customer"
+          type="button"
+          disabled
+        >
+          Connect as Customer
+        </button>
+        <button
+          id="btn_start_recording"
+          type="button"
+          disabled
+        >
+          Start Recording
+        </button>
+        <button
+          id="btn_stop_recording"
+          type="button"
+          disabled
+        >
+          Stop Recording
+        </button>
+      </div>
+    </div>
+
+    <div class="video_container">
+      <div>
+        <p>Agent</p>
+        <div id="agent-container"></div>
+      </div>
+
+      <div>
+        <p>Customer</p>
+        <div id="customer-container"></div>
+      </div>
+    </div>
+
+    <div>
+      <button
+        id="btn_end_call"
+        type="button"
+        disabled
+      >
+        End Call
+      </button>
+      <button
+        id="btn_preview_recording"
+        type="button"
+        disabled
+      >
+        Preview Recording
+      </button>
+      <button
+        id="btn_download_recording"
+        type="button"
+        disabled
+      >
+        Download Recording
+      </button>
+    </div>
+
+    <div id="preview_section">
+      <p>Preview Recording</p>
+      <div id="preview_container" />
+    </div>
+
+    <script src="/client.js"></script>
+  </body>
+</html>
