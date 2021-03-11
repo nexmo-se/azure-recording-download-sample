@@ -2,6 +2,23 @@
   "name": "Azure Recording Download Sample",
   "description": "A sample code that includes frontend and backend to download Opentok recording from Azure",
   "repository": "https://github.com/nexmo-se/azure-recording-download-sample",
-  "logo": "https://node-js-sample.herokuapp.com/node.png",
-  "keywords": ["node", "express", "static"]
+  "logo": "https://logos.bugcrowdusercontent.com/logos/5589/c34e/b19c9efa/e1aa28a047d9c99d95500c70febcda50_VonageLogo_Symbol_Black__1_.png",
+  "keywords": ["node", "express", "static"],
+  "env": {
+    "OT_API_KEY": {
+      "description": "Vonage Video API API Key. Get it from Video API Dashboard"
+    },
+    "OT_API_SECRET": {
+      "description": "Vonage Video API API Secret. Get it from Video API Dashboard"
+    },
+    "AZ_CONTAINER_NAME": {
+      "description": "Your Azure Storage container name."
+    },
+    "AZ_ACCOUNT_NAME": {
+      "description": "Your Azure Storage account name. View it in Access Key section."
+    },
+    "AZ_ACCOUNT_KEY": {
+      "description": "Your Azure Storage account key. View it in Access Key section."
+    }
+  }
 }
